@@ -79,6 +79,23 @@ video, canvas, svg {
 .seconds {
     --width : 40vw;
 }
+
+@media (width < 870px) {
+    .hours {
+       
+        --width : 40vw;
+        
+    }
+    
+    .minutes {
+       
+        --width : 60vw;
+    
+    }
+    .seconds {
+        --width : 80vw;
+    }
+}
 .circle {
     --rotate : 90deg;
     --transtion-time: 1s;

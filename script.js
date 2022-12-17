@@ -4,7 +4,7 @@ const secondCircle = document.querySelector('[data-seconds]');
 const clockTime = document.querySelector('.clock-time');
 
 let date = new Date();
-let hours = date.getHours()%13;
+let hours = date.getHours()%12;
 
 let minutes = date.getMinutes();
 let seconds = date.getSeconds();
@@ -58,7 +58,7 @@ function setSeconds() {
 }
 
 function setClock(){
-    clockTime.querySelector('.h').innerText = hours;
+    clockTime.querySelector('.h').innerText = hours ? hours : 12;
     clockTime.querySelector('.m').innerText = minutes;
     clockTime.querySelector('.s').innerText = seconds;
     clockTime.querySelector('.zone').innerText = date.getHours() >= 12 ? 'PM' : 'AM';
